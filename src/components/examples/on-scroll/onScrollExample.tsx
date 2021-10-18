@@ -78,7 +78,7 @@ export default function OnScrollExample() {
             </div>
           </div>
 
-          <CodeExample filename="user-input.tsx" code={code} />
+          <CodeExample filename="onScrollExample.tsx" code={code} />
         </div>
       </div>
     </div>

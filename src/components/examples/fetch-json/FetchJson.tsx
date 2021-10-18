@@ -69,7 +69,7 @@ export default function FetchAndFilter() {
             </div>
           )}
 
-          <CodeExample filename="Counter.tsx" code={code} />
+          <CodeExample filename="FetchJson.tsx" code={code} />
         </div>
       </div>
     </div>
