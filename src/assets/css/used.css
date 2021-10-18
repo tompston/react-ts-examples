@@ -1,0 +1,117 @@
+
+.component_file_name {
+  font-size: 26px;
+  padding-top: 44px;
+  padding-bottom: 6px;
+}
+
+.counter-grid {
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+  min-height: 60px;
+}
+
+.range-slider-box {
+  grid-template-columns: 0.2fr auto;
+}
+
+.commands-grid {
+  grid-template-columns: 130px 130px 150px 1fr;
+}
+
+.single-project {
+  grid-template-columns: auto 120px;
+}
+
+/* classes that are used in 05 component to indicate if the data is being fetched */
+.isLoading-false {
+  background: rgb(199, 234, 255);
+}
+.isLoading-true {
+  background: rgb(179, 255, 135);
+}
+
+.scroll-grid {
+  overflow-y: scroll;
+}
+
+.scroll-variables-grid {
+  grid-template-columns: 140px 150px auto;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+:root {
+  --navbar-width: 290px;
+}
+.main_left_container {
+  position: fixed;
+  height: 100%;
+  width: var(--navbar-width);
+  border-right: 2px solid rgb(235, 235, 235);
+  z-index: 20;
+  background: rgb(255, 255, 255);
+}
+.main_right_container {
+  height: 100%;
+  margin-left: var(--navbar-width);
+  /* background: rgba(172, 255, 47, 0.563); */
+}
+
+/* max width and padding for the right */
+.max-width-custom {
+  max-width: 1100px;
+  /* seperates left from right */
+  padding-left: 56px;
+  padding-top: 20px;
+  padding-right: 40px;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+.component-name {
+  margin-top: 28px;
+  margin-bottom: 16px;
+}
+.delete-button {
+  background: rgb(184, 65, 65);
+  color: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(238, 238, 238, 0.24);
+}
+.code-block-overflow {
+  /* width: 100%; */
+  border-radius: 10px;
+  border: 2px solid rgba(213, 213, 213, 0.3);
+  overflow-y: scroll;
+}
+@media screen and (max-width: 1300px) {
+  .code-block-overflow {
+    max-width: 800px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .code-block-overflow {
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .code-block-overflow {
+    max-width: 600px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .code-block-overflow {
+    max-width: 600px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .code-block-overflow {
+    max-width: 520px;
+  }
+}
