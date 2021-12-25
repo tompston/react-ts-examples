@@ -44,6 +44,11 @@ export default function MyProjects() {
 }
 
 const code = `
+import React, { useState } from 'react'
+import { projectsData } from './data'
+import SingleProject from './single-project'
+import CodeExample from '../../utils/CodeExample'
+
 export default function MyProjects() {
   // variable that will hold the projects array
   const [projects, setProjects] = useState(projectsData)
@@ -56,13 +61,12 @@ export default function MyProjects() {
   }
 
   return (
-    <div className="flex-center">
+    <div className="flex-center max-width-custom">
       <div className="max-width-1">
-        <div className="component_file_name">03-projects.tsx</div>
+        <div className="header-3 component-name">For Loops on Arrays</div>
         {/* for loop code */}
         <div className="grid gap-24 ">
           {projects.map((project) => {
-            //   single value
             return (
               //the top element shold hold the key={} value
               <SingleProject
@@ -75,6 +79,11 @@ export default function MyProjects() {
             )
           })}
         </div>
+
+        <CodeExample filename="projects.tsx" code={code} />
+        <CodeExample filename="single-project.tsx" code={childCode} />
+        <CodeExample filename="data.ts" code={usedData} />
+
       </div>
     </div>
   )

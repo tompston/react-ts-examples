@@ -43,6 +43,10 @@ export default function ParentExample() {
 //          export default function ChildComponent(props: any){}
 
 const code = `
+import React from 'react'
+import Child from './child'
+import CodeExample from '../../utils/CodeExample'
+
 export default function ParentExample() {
   // random function
   const nameOfMyFunction = () => {
@@ -64,7 +68,10 @@ export default function ParentExample() {
             Click me to console.log the event
           </div>
         </div>
-        
+
+        <CodeExample filename="parent.tsx" code={code} />
+
+        <CodeExample filename="child.tsx" code={childCode} />
       </div>
     </div>
   )
@@ -79,12 +86,13 @@ export default function ParentExample() {
 //
 //    Or you can also specify in the child component that it can accept any prop with:
 //          export default function ChildComponent(props: any){}
-
-
 `
 
 const childCode = `
+import React from 'react'
+
 export default function Child(props: { myText: string }) {
   return <div className="border-1 flex-center min-h-40">{props.myText}</div>
 }
+
 `

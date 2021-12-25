@@ -351,6 +351,7 @@ a:active {
 .text-3 {
   font-size: var(--fs-8);
   line-height: 1.688;
+  max-width: 700px;
 }
 .text-4 {
   font-size: var(--fs-9);

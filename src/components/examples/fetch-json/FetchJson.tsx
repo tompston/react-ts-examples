@@ -77,6 +77,9 @@ export default function FetchAndFilter() {
 }
 
 const code = `
+import React, { useState, useEffect } from 'react'
+import fakePause from '../../utils/utils'
+import CodeExample from '../../utils/CodeExample'
 
 export default function FetchAndFilter() {
   // let [fetchedArticles, setFetchedArticles] = useState<any[]>([]);
@@ -145,7 +148,7 @@ export default function FetchAndFilter() {
             </div>
           )}
 
-          <CodeExample filename="Counter.tsx" code={code} />
+          <CodeExample filename="FetchJson.tsx" code={code} />
         </div>
       </div>
     </div>

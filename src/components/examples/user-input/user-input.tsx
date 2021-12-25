@@ -43,11 +43,11 @@ export default function UserInput() {
 
           <ReactMarkdown>
             {`
-    {    
-        username: ${username}
-        password: ${password}
-    }
-    `}
+        {    
+                username: ${username}
+                password: ${password}
+        }
+            `}
           </ReactMarkdown>
 
           <div className="mb-20 mt-40">
@@ -64,6 +64,10 @@ export default function UserInput() {
 }
 
 const code = `
+import React, { useRef, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
+import CodeExample from '../../utils/CodeExample'
+
 export default function UserInput() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -103,12 +107,22 @@ export default function UserInput() {
 
           <div className="fs-5 fw-600 mb-20 mt-60">post body example</div>
 
+          <ReactMarkdown>
+            {\`
+    {    
+        username: \${username}
+        password: \${password}
+    }
+    \`}
+          </ReactMarkdown>
+
           <div className="mb-20 mt-40">
             <button className="button-1 border-1 transition-1" onClick={ShowPostRequest}>
               console.log body
             </button>
           </div>
 
+          <CodeExample filename="user-input.tsx" code={code} />
         </div>
       </div>
     </div>

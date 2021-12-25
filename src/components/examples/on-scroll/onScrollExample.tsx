@@ -87,10 +87,19 @@ export default function OnScrollExample() {
 
 
 const code = `
+import React, { useState, useEffect } from 'react'
+import CodeExample from '../../utils/CodeExample'
+
 export default function OnScrollExample() {
   // credits to this https://www.kindacode.com/article/react-typescript-handling-onscroll-event/
 
   // Generate some dummy data
+  const DUMMY_DATA = Array.from({ length: 40 }, (x, i) => {
+    return {
+      id: i,
+      title: \`Item \${i}\`,
+    }
+  })
 
   const [progress, setProgress] = useState(0)
   const [elementHeight, setElementHeight] = useState(0)
@@ -157,6 +166,8 @@ export default function OnScrollExample() {
               </div>
             </div>
           </div>
+
+          <CodeExample filename="onScrollExample.tsx" code={code} />
         </div>
       </div>
     </div>

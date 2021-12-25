@@ -34,6 +34,9 @@ export default function Counter() {
 }
 
 const code = `
+import React, { useState } from 'react'
+import CodeExample from '../../utils/CodeExample'
+
 export default function Counter() {
   const [count, setCount] = useState(0)
 
@@ -59,7 +62,7 @@ export default function Counter() {
             </button>
           </div>
 
-          <CodeExample filename="projects.tsx" code={code} />
+          <CodeExample filename="Counter.tsx" code={code} />
         </div>
       </div>
     </div>
