@@ -59,7 +59,7 @@ html {
   height: 100%;
   -webkit-text-size-adjust: 100%;
   overflow-y: scroll; /* make the scrollbar not take up the total space of the page */
-  cursor: context-menu;
+  cursor: default;
 }
 
 body {
